@@ -32,7 +32,7 @@ namespace Il2Cpp {
         },
 
         get arrayGetLength() {
-            return r("il2cpp_array_length", "uint32", ["pointer"]);
+            return r("il2cpp_array_length", "uint32", ["pointer"], 0x5c3abfc);
         },
 
         get arrayNew() {
@@ -40,7 +40,7 @@ namespace Il2Cpp {
         },
 
         get assemblyGetImage() {
-            return r("il2cpp_assembly_get_image", "pointer", ["pointer"]);
+            return r("il2cpp_assembly_get_image", "pointer", ["pointer"], 0x5c3ac14);
         },
 
         get classForEach() {
@@ -48,31 +48,31 @@ namespace Il2Cpp {
         },
 
         get classFromName() {
-            return r("il2cpp_class_from_name", "pointer", ["pointer", "pointer", "pointer"]);
+            return r("il2cpp_class_from_name", "pointer", ["pointer", "pointer", "pointer"], 0x5c3ac38);
         },
 
         get classFromObject() {
-            return r("il2cpp_class_from_system_type", "pointer", ["pointer"]);
+            return r("il2cpp_class_from_system_type", "pointer", ["pointer"], 0x5c3ac1c);
         },
 
         get classGetArrayClass() {
-            return r("il2cpp_array_class_get", "pointer", ["pointer", "uint32"]);
+            return r("il2cpp_array_class_get", "pointer", ["pointer", "uint32"], 0x5c3abf8);
         },
 
         get classGetArrayElementSize() {
-            return r("il2cpp_class_array_element_size", "int", ["pointer"]);
+            return r("il2cpp_class_array_element_size", "int", ["pointer"], 0x5c3ac74);
         },
 
         get classGetAssemblyName() {
-            return r("il2cpp_class_get_assemblyname", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_assemblyname", "pointer", ["pointer"], 0x5c3ac90);
         },
 
         get classGetBaseType() {
-            return r("il2cpp_class_enum_basetype", "pointer", ["pointer"]);
+            return r("il2cpp_class_enum_basetype", "pointer", ["pointer"], 0x5c3ac18);
         },
 
         get classGetDeclaringType() {
-            return r("il2cpp_class_get_declaring_type", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_declaring_type", "pointer", ["pointer"], 0x5c3ac58);
         },
 
         get classGetElementClass() {
@@ -80,11 +80,11 @@ namespace Il2Cpp {
         },
 
         get classGetFieldFromName() {
-            return r("il2cpp_class_get_field_from_name", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_class_get_field_from_name", "pointer", ["pointer", "pointer"], 0x5c3ac44);
         },
 
         get classGetFields() {
-            return r("il2cpp_class_get_fields", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_class_get_fields", "pointer", ["pointer", "pointer"], 0x5c3ac3c);
         },
 
         get classGetFlags() {
@@ -92,39 +92,39 @@ namespace Il2Cpp {
         },
 
         get classGetImage() {
-            return r("il2cpp_class_get_image", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_image", "pointer", ["pointer"], 0x5c3ac8c);
         },
 
         get classGetInstanceSize() {
-            return r("il2cpp_class_instance_size", "int32", ["pointer"]);
+            return r("il2cpp_class_instance_size", "int32", ["pointer"], 0x5c3ac5c);
         },
 
         get classGetInterfaces() {
-            return r("il2cpp_class_get_interfaces", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_class_get_interfaces", "pointer", ["pointer", "pointer"], 0x5c803d4);
         },
 
         get classGetMethodFromName() {
-            return r("il2cpp_class_get_method_from_name", "pointer", ["pointer", "pointer", "int"]);
+            return r("il2cpp_class_get_method_from_name", "pointer", ["pointer", "pointer", "int"], 0x5c8059c);
         },
 
         get classGetMethods() {
-            return r("il2cpp_class_get_methods", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_class_get_methods", "pointer", ["pointer", "pointer"], 0x5c3ac48);
         },
 
         get classGetName() {
-            return r("il2cpp_class_get_name", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_name", "pointer", ["pointer"], 0x5c3ac4c);
         },
 
         get classGetNamespace() {
-            return r("il2cpp_class_get_namespace", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_namespace", "pointer", ["pointer"], 0x5c3ac50);
         },
 
         get classGetNestedClasses() {
-            return r("il2cpp_class_get_nested_types", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_class_get_nested_types", "pointer", ["pointer", "pointer"], 0x5c3ac40);
         },
 
         get classGetParent() {
-            return r("il2cpp_class_get_parent", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_parent", "pointer", ["pointer"], 0x5c3ac54);
         },
 
         get classGetStaticFieldData() {
@@ -136,7 +136,7 @@ namespace Il2Cpp {
         },
 
         get classGetType() {
-            return r("il2cpp_class_get_type", "pointer", ["pointer"]);
+            return r("il2cpp_class_get_type", "pointer", ["pointer"], 0x5c3ac80);
         },
 
         get classHasReferences() {
@@ -144,7 +144,7 @@ namespace Il2Cpp {
         },
 
         get classInitialize() {
-            return r("il2cpp_runtime_class_init", "void", ["pointer"]);
+            return r("il2cpp_runtime_class_init", "void", ["pointer"], 0x5c7d080);
         },
 
         get classIsAbstract() {
@@ -160,19 +160,19 @@ namespace Il2Cpp {
         },
 
         get classIsEnum() {
-            return r("il2cpp_class_is_enum", "bool", ["pointer"]);
+            return r("il2cpp_class_is_enum", "bool", ["pointer"], 0x5c3ac88);
         },
 
         get classIsGeneric() {
-            return r("il2cpp_class_is_generic", "bool", ["pointer"]);
+            return r("il2cpp_class_is_generic", "bool", ["pointer"], 0x5c3ac20);
         },
 
         get classIsInflated() {
-            return r("il2cpp_class_is_inflated", "bool", ["pointer"]);
+            return r("il2cpp_class_is_inflated", "bool", ["pointer"], 0x5c3ac24);
         },
 
         get classIsInterface() {
-            return r("il2cpp_class_is_interface", "bool", ["pointer"]);
+            return r("il2cpp_class_is_interface", "bool", ["pointer"], 0x5c3ac70);
         },
 
         get classIsSubclassOf() {
@@ -180,7 +180,7 @@ namespace Il2Cpp {
         },
 
         get classIsValueType() {
-            return r("il2cpp_class_is_valuetype", "bool", ["pointer"]);
+            return r("il2cpp_class_is_valuetype", "bool", ["pointer"], 0x5c3ac60);
         },
 
         get domainGetAssemblyFromName() {
@@ -188,11 +188,11 @@ namespace Il2Cpp {
         },
 
         get domainGet() {
-            return r("il2cpp_domain_get", "pointer", []);
+            return r("il2cpp_domain_get", "pointer", [], 0x5c3ac94);
         },
 
         get domainGetAssemblies() {
-            return r("il2cpp_domain_get_assemblies", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_domain_get_assemblies", "pointer", ["pointer", "pointer"], 0x9353908); // &il2cpp::vm::s_Assemblies, il2cpp_domain_get_assemblies inline
         },
 
         get fieldGetClass() {
@@ -200,23 +200,23 @@ namespace Il2Cpp {
         },
 
         get fieldGetFlags() {
-            return r("il2cpp_field_get_flags", "int", ["pointer"]);
+            return r("il2cpp_field_get_flags", "int", ["pointer"], 0x5c3acbc);
         },
 
         get fieldGetName() {
-            return r("il2cpp_field_get_name", "pointer", ["pointer"]);
+            return r("il2cpp_field_get_name", "pointer", ["pointer"], 0x5c3acb8);
         },
 
         get fieldGetOffset() {
-            return r("il2cpp_field_get_offset", "int32", ["pointer"]);
+            return r("il2cpp_field_get_offset", "int32", ["pointer"], 0x5c3acc4);
         },
 
         get fieldGetStaticValue() {
-            return r("il2cpp_field_static_get_value", "void", ["pointer", "pointer"]);
+            return r("il2cpp_field_static_get_value", "void", ["pointer", "pointer"], 0x5c7d370);
         },
 
         get fieldGetType() {
-            return r("il2cpp_field_get_type", "pointer", ["pointer"]);
+            return r("il2cpp_field_get_type", "pointer", ["pointer"], 0x5c3acc8);
         },
 
         get fieldSetStaticValue() {
@@ -224,7 +224,7 @@ namespace Il2Cpp {
         },
 
         get free() {
-            return r("il2cpp_free", "void", ["pointer"]);
+            return r("il2cpp_free", "void", ["pointer"], 0x5c3abf4);
         },
 
         get gcCollect() {
@@ -296,7 +296,7 @@ namespace Il2Cpp {
         },
 
         get getCorlib() {
-            return r("il2cpp_get_corlib", "pointer", []);
+            return r("il2cpp_get_corlib", "pointer", [], 0x5c3abec);
         },
 
         get imageGetAssembly() {
@@ -304,19 +304,19 @@ namespace Il2Cpp {
         },
 
         get imageGetClass() {
-            return r("il2cpp_image_get_class", "pointer", ["pointer", "uint"]);
+            return r("il2cpp_metadata_cache_get_type_info_from_type_definition_index", "pointer", ["uint32"], 0x5c85f74);
         },
-
+/*
         get imageGetClassCount() {
-            return r("il2cpp_image_get_class_count", "uint32", ["pointer"]);
+            return r("il2cpp_image_get_class_count", "uint32", ["pointer"]); // inline
         },
 
         get imageGetName() {
-            return r("il2cpp_image_get_name", "pointer", ["pointer"]);
+            return r("il2cpp_image_get_name", "pointer", ["pointer"]); // inline
         },
-
+*/
         get initialize() {
-            return r("il2cpp_init", "void", ["pointer"]);
+            return r("il2cpp_init", "void", ["pointer"], 0x5c3ab9c);
         },
 
         get livenessAllocateStruct() {
@@ -360,7 +360,7 @@ namespace Il2Cpp {
         },
 
         get methodGetClass() {
-            return r("il2cpp_method_get_class", "pointer", ["pointer"]);
+            return r("il2cpp_method_get_class", "pointer", ["pointer"], 0x5c3ad24);
         },
 
         get methodGetFlags() {
@@ -368,43 +368,43 @@ namespace Il2Cpp {
         },
 
         get methodGetName() {
-            return r("il2cpp_method_get_name", "pointer", ["pointer"]);
+            return r("il2cpp_method_get_name", "pointer", ["pointer"], 0x5c3ad0c);
         },
 
         get methodGetObject() {
-            return r("il2cpp_method_get_object", "pointer", ["pointer", "pointer"]);
+            return r("il2cpp_method_get_object", "pointer", ["pointer", "pointer"], 0x5c3ad08);
         },
 
         get methodGetParameterCount() {
-            return r("il2cpp_method_get_param_count", "uint8", ["pointer"]);
+            return r("il2cpp_method_get_param_count", "uint8", ["pointer"], 0x5c3ad1c);
         },
-
+/*
         get methodGetParameterName() {
-            return r("il2cpp_method_get_param_name", "pointer", ["pointer", "uint32"]);
+            return r("il2cpp_method_get_param_name", "pointer", ["pointer", "uint32"]); // inline
         },
-
+*/
         get methodGetParameters() {
             return r("il2cpp_method_get_parameters", "pointer", ["pointer", "pointer"]);
         },
 
         get methodGetParameterType() {
-            return r("il2cpp_method_get_param", "pointer", ["pointer", "uint32"]);
+            return r("il2cpp_method_get_param", "pointer", ["pointer", "uint32"], 0x5c3ad20);
         },
 
         get methodGetReturnType() {
-            return r("il2cpp_method_get_return_type", "pointer", ["pointer"]);
+            return r("il2cpp_method_get_return_type", "pointer", ["pointer"], 0x5c3ad04);
         },
 
         get methodIsGeneric() {
-            return r("il2cpp_method_is_generic", "bool", ["pointer"]);
+            return r("il2cpp_method_is_generic", "bool", ["pointer"], 0x5c3ad10);
         },
 
         get methodIsInflated() {
-            return r("il2cpp_method_is_inflated", "bool", ["pointer"]);
+            return r("il2cpp_method_is_inflated", "bool", ["pointer"], 0x5c3ad14);
         },
 
         get methodIsInstance() {
-            return r("il2cpp_method_is_instance", "bool", ["pointer"]);
+            return r("il2cpp_method_is_instance", "bool", ["pointer"], 0x5c3ad18);
         },
 
         get monitorEnter() {
@@ -436,7 +436,7 @@ namespace Il2Cpp {
         },
 
         get objectGetClass() {
-            return r("il2cpp_object_get_class", "pointer", ["pointer"]);
+            return r("il2cpp_object_get_class", "pointer", ["pointer"], 0x5c3ad2c);
         },
 
         get objectGetVirtualMethod() {
@@ -460,19 +460,19 @@ namespace Il2Cpp {
         },
 
         get resolveInternalCall() {
-            return r("il2cpp_resolve_icall", "pointer", ["pointer"]);
+            return r("il2cpp_resolve_icall", "pointer", ["pointer"], 0x5c7103c);
         },
 
         get stringGetChars() {
-            return r("il2cpp_string_chars", "pointer", ["pointer"]);
+            return r("il2cpp_string_chars", "pointer", ["pointer"], 0x5c3ada0);
         },
 
         get stringGetLength() {
-            return r("il2cpp_string_length", "int32", ["pointer"]);
+            return r("il2cpp_string_length", "int32", ["pointer"], 0x5c3ad9c);
         },
 
         get stringNew() {
-            return r("il2cpp_string_new", "pointer", ["pointer"]);
+            return r("il2cpp_string_new", "pointer", ["pointer"], 0x5c3ada4);
         },
 
         get valueTypeBox() {
@@ -480,7 +480,7 @@ namespace Il2Cpp {
         },
 
         get threadAttach() {
-            return r("il2cpp_thread_attach", "pointer", ["pointer"]);
+            return r("il2cpp_thread_attach", "pointer", ["pointer"], 0x5c3adbc);
         },
 
         get threadDetach() {
@@ -492,7 +492,7 @@ namespace Il2Cpp {
         },
 
         get threadGetCurrent() {
-            return r("il2cpp_thread_current", "pointer", []);
+            return r("il2cpp_thread_current", "pointer", [], 0x5c3adb8);
         },
 
         get threadIsVm() {
@@ -504,19 +504,19 @@ namespace Il2Cpp {
         },
 
         get typeGetClass() {
-            return r("il2cpp_class_from_type", "pointer", ["pointer"]);
+            return r("il2cpp_class_from_type", "pointer", ["pointer"], 0x5c3ac78);
         },
 
         get typeGetName() {
-            return r("il2cpp_type_get_name", "pointer", ["pointer"]);
+            return r("il2cpp_type_get_name", "pointer", ["pointer"], 0x5c3adcc);
         },
 
         get typeGetObject() {
-            return r("il2cpp_type_get_object", "pointer", ["pointer"]);
+            return r("il2cpp_type_get_object", "pointer", ["pointer"], 0x5c3adc0);
         },
 
         get typeGetTypeEnum() {
-            return r("il2cpp_type_get_type", "int", ["pointer"]);
+            return r("il2cpp_type_get_type", "int", ["pointer"], 0x5c3adc4);
         }
     };
 

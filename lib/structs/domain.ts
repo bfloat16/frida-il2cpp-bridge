@@ -4,7 +4,7 @@ namespace Il2Cpp {
         /** Gets the assemblies that have been loaded into the execution context of the application domain. */
         @lazy
         get assemblies(): Il2Cpp.Assembly[] {
-            let handles = readNativeList(_ => Il2Cpp.exports.domainGetAssemblies(this, _));
+            let handles = readDomainAssemblies();
 
             if (handles.length == 0) {
                 const assemblyObjects = this.object.method<Il2Cpp.Array<Il2Cpp.Object>>("GetAssemblies").overload().invoke();
@@ -42,4 +42,22 @@ namespace Il2Cpp {
     getter(Il2Cpp, "domain", () => {
         return new Il2Cpp.Domain(Il2Cpp.exports.domainGet());
     }, lazy);
+
+    function readDomainAssemblies(): NativePointer[] {
+        const assemblies = Il2Cpp.$config.exports?.il2cpp_domain_get_assemblies?.() ?? Il2Cpp.module.base.add(0x9353908);
+        const start = assemblies.readPointer();
+        const end = assemblies.add(Process.pointerSize).readPointer();
+
+        if (start.isNull() || end.compare(start) <= 0) {
+            return [];
+        }
+
+        const handles: NativePointer[] = [];
+
+        for (let current = start; current.compare(end) < 0; current = current.add(Process.pointerSize)) {
+            handles.push(current.readPointer());
+        }
+
+        return handles;
+    }
 }

@@ -105,7 +105,7 @@ namespace Il2Cpp {
             case "windows":
                 return ["GameAssembly.dll"];
             case "darwin":
-                return ["UnityFramework", "GameAssembly.dylib"];
+                return ["wd", "GameAssembly.dylib"];
         }
 
         raise(`${Process.platform} is not supported yet`);

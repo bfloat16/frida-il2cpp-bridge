@@ -27,7 +27,8 @@
     "cli"
   ],
   "scripts": {
-    "build": "npm exec tspc"
+    "build": "npm exec tspc",
+    "dump:wd": "npm run build && npm exec frida-il2cpp-bridge -- -U -f com.miHoYo.wd dump --out-dir dumps --dump-kind dumpdll"
   },
   "bin": {
     "frida-il2cpp-bridge": "cli/main.py"

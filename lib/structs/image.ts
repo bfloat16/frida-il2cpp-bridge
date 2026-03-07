@@ -13,7 +13,7 @@ namespace Il2Cpp {
             if (Il2Cpp.unityVersionIsBelow201830) {
                 return this.classes.length;
             } else {
-                return Il2Cpp.exports.imageGetClassCount(this);
+                return this.handle.add(0x1c).readU32();
             }
         }
 
@@ -36,14 +36,14 @@ namespace Il2Cpp {
 
                 return classes;
             } else {
-                return globalThis.Array.from(globalThis.Array(this.classCount), (_, i) => new Il2Cpp.Class(Il2Cpp.exports.imageGetClass(this, i)));
+                return globalThis.Array.from(globalThis.Array(this.classCount), (_, i) => new Il2Cpp.Class(this.classFromIndex(i)));
             }
         }
 
         /** Gets the name of this image. */
         @lazy
         get name(): string {
-            return Il2Cpp.exports.imageGetName(this).readUtf8String()!;
+            return this.handle.readPointer().readUtf8String()!;
         }
 
         /** Gets the class with the specified name defined in this image. */
@@ -58,6 +58,11 @@ namespace Il2Cpp {
             const className = Memory.allocUtf8String(name.slice(dotIndex + 1));
 
             return new Il2Cpp.Class(Il2Cpp.exports.classFromName(this, classNamespace, className)).asNullable();
+        }
+
+        classFromIndex(index: number): NativePointer {
+            const typeStart = this.handle.add(0x18).readU32();
+            return Il2Cpp.exports.imageGetClass(typeStart + index);
         }
     }
 

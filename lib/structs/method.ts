@@ -128,8 +128,12 @@ namespace Il2Cpp {
         /** Gets the parameters of this method. */
         @lazy
         get parameters(): Il2Cpp.Parameter[] {
+            const parametersOffset = Process.pointerSize * 5;
+            const parameterSize = Process.pointerSize * 2 + 8;
+            const parameters = this.handle.add(parametersOffset).readPointer();
+
             return globalThis.Array.from(globalThis.Array(this.parameterCount), (_, i) => {
-                const parameterName = Il2Cpp.exports.methodGetParameterName(this, i).readUtf8String()!;
+                const parameterName = parameters.isNull() ? "" : parameters.add(i * parameterSize).readPointer().readUtf8String() ?? "";
                 const parameterType = Il2Cpp.exports.methodGetParameterType(this, i);
                 return new Il2Cpp.Parameter(parameterName, i, new Il2Cpp.Type(parameterType));
             });
