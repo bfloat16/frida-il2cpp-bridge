@@ -23,13 +23,11 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "files": [
-    "dist", "cli"
+    "dist",
+    "cli"
   ],
   "scripts": {
-    "prepare": "make dist",
-    "watch": "npm exec tspc -- --watch",
-    "test": "make test",
-    "testd": "make testd"
+    "build": "npm exec tspc"
   },
   "bin": {
     "frida-il2cpp-bridge": "cli/main.py"
@@ -44,7 +42,8 @@
   "devDependencies": {
     "@types/frida-gum": "^19.0.0",
     "ts-patch": "^3.2.1",
-    "ts-transformer-inline-file": "^0.2.0"
+    "ts-transformer-inline-file": "^0.2.0",
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "ts-transformer-inline-file": {
