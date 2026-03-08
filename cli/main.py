@@ -2,10 +2,13 @@
 
 from src.app import FridaIl2CppBridgeApplication
 from src.dump.command import DumpCommand
+from src.metadata_usage.command import DumpInitializeMethodMetadataRangeCommand
 
 
 if __name__ == "__main__":
     try:
-        FridaIl2CppBridgeApplication(commands=[DumpCommand]).run()
+        FridaIl2CppBridgeApplication(
+            commands=[DumpCommand, DumpInitializeMethodMetadataRangeCommand]
+        ).run()
     except KeyboardInterrupt:
         pass
